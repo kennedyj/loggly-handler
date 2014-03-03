@@ -1,0 +1,15 @@
+# compiled source
+*.pyc
+
+# OS generated files
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# generated
+doc/
+cover/
+out/
+.coverage
