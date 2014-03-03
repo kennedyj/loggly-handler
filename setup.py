@@ -2,16 +2,10 @@
 
 from setuptools import setup, find_packages
 
-
-def readme():
-    with open("README.md") as f:
-        return f.read()
-
 setup(
     name="loggly-handler",
-    version='0.1.0',
+    version='0.1.2',
     description="Python logging handler that sends messages to Loggly",
-    long_description=readme(),
     keywords="loggly logging handler https",
     author="Josh Kennedy",
     author_email="kennedy.josh@gmail.com",

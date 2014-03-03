@@ -18,4 +18,7 @@ clean:
 	@find . -name "*.pyc" -delete
 	@rm -r cover
 
-.PHONY: test unittest lint verboselint clean 
+publish:
+	@python setup.py sdist upload
+
+.PHONY: test unittest lint verboselint clean publish 
