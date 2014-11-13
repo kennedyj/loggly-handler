@@ -5,7 +5,7 @@ Python Logging Loggly Handler
 
 A simple Python logging Loggly handler that can be used to send to a Loggly Gen2 https endpoint. Borrowed the extra fields concept from the graypy logging library.
 
-## Installataion
+## Installation
 Download the repository and install the setup.py file
     
     sudo python setup.py install
