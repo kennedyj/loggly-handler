@@ -6,33 +6,40 @@ Python Logging Loggly Handler
 A simple Python logging Loggly handler that can be used to send to a Loggly Gen2 https endpoint. Borrowed the extra fields concept from the graypy logging library.
 
 ## Installation
-Download the repository and install the setup.py file
+Download the repository using pip 
     
-    sudo python setup.py install
+    sudo pip install loggly-handler
 
 ## Configuration
 
-Excerpt for the json logging configuration.
+Create a Configuration file python.conf and add HTTPSHandler to Configuration File.
+    [handlers]
+    keys=HTTPSHandler
+    
+    [handler_HTTPSHandler]
+    class=loggly.handlers.HTTPSHandler
+    level=INFO
+    args=('https://logs-01.loggly.com/inputs/LOGGLY-TOKEN/tag/python','POST')
+    
+    [formatters]
+    keys=
+    
+    [loggers]
+    keys=root
+    
+    [logger_root]
+    handlers=HTTPSHandler
 
-    {
-      "handlers": {
-        "loggly": {
-          "class": "loggly.handlers.HTTPSHandler",
-          "level": "INFO",
-          "url": "https://logs-01.loggly.com/inputs/TOKEN/tag/python",
-          "facility": "my-app-name"
-        }
-      }
-    }
-
-Adding the HTTPSHandler to a logger
+## Use Configuration in python file
 
     import logging
+    import logging.config
     import loggly.handlers
-    handler = loggly.handlers.HTTPSHandler('https://logs-01.loggly.com/inputs/TOKEN/tag/python')
-    logger.addHandler(handler)
+    
+    logging.config.fileConfig('python.conf')
+    logger = logging.getLogger()
     logger.setLevel(logging.INFO)
-    logger.info('sent to loggly')
+    logger.info('test Loggly log')
 
 
 Replace
