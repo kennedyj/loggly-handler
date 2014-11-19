@@ -19,7 +19,7 @@ Create a Configuration file python.conf and add HTTPSHandler to Configuration Fi
     [handler_HTTPSHandler]
     class=loggly.handlers.HTTPSHandler
     level=INFO
-    args=('https://logs-01.loggly.com/inputs/LOGGLY-TOKEN/tag/python','POST')
+    args=('https://logs-01.loggly.com/inputs/TOKEN/tag/python','POST')
     
     [formatters]
     keys=
