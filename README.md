@@ -13,6 +13,7 @@ Download the repository using pip
 ## Configuration
 
 Create a Configuration file python.conf and add HTTPSHandler to Configuration File.
+    
     [handlers]
     keys=HTTPSHandler
     
