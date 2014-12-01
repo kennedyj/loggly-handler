@@ -7,6 +7,8 @@ A simple Pyhton logging Loggly handler that can be used to send to a Loggly gen 
 
 ## Configuration
 
+Replace ``MY-INPUT`` with your API-token).
+
 Excerpt for the json logging configuration.
 
     {
@@ -14,7 +16,7 @@ Excerpt for the json logging configuration.
         "loggly": {
           "class": "loggly.handlers.HTTPSHandler",
           "level": "INFO",
-          "url": "https://logs.loggly.com/inputs/MY-INPUT",
+          "url": "https://logs-01.loggly.com/inputs/MY-INPUT",
           "facility": "my-app-name"
         }
       }
@@ -23,7 +25,7 @@ Excerpt for the json logging configuration.
 Adding the handler to a logger
 
     logger = logging.getLogger(__name__)
-    handler = loggly.handlers.HTTPSHandler('https://logs.loggly.com/inputs/MY-INPUT')
+    handler = loggly.handlers.HTTPSHandler('https://logs-01.loggly.com/inputs/MY-INPUT')
     logger.addHandler(handler)
     logger.setLevel(logging.DEBUG)
 
