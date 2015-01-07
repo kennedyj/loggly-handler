@@ -1,4 +1,4 @@
-Pyhton Logging Loggly Handler
+Python Logging Loggly Handler
 -----------------------------
 
 [![Build Status](https://travis-ci.org/kennedyj/loggly-handler.png?branch=master)](https://travis-ci.org/kennedyj/loggly-handler) [![Coverage Status](https://coveralls.io/repos/kennedyj/loggly-handler/badge.png?branch=master)](https://coveralls.io/r/kennedyj/loggly-handler?branch=master)
